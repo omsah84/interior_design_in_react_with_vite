@@ -11,6 +11,14 @@ const HowItWorksContainer = styled(Box)({
   alignItems: "center",
 });
 
+const Container = styled(Box)({
+  display: "flex",
+
+  "@media (max-width: 700px)": {
+    flexDirection: "column",
+  },
+});
+
 const StepContainer = styled(Box)({
   display: "flex",
   flexDirection: "column",
@@ -31,12 +39,13 @@ const StepIcon = styled(Box)({
 
 const StepText = styled(Typography)({
   fontSize: "16px",
-  padding:'10px',
+  padding: "10px",
   marginBottom: "5px",
-});
-
-const Container = styled(Box)({
-  display: "flex",
+  "@media (max-width: 700px)": {
+    fontSize: "15px",
+    padding: "0px",
+    marginBottom: "0px",
+  },
 });
 
 const HowItWorks = () => {

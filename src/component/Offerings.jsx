@@ -23,18 +23,26 @@ const ColumnHeading = styled(Typography)({
 const Container = styled(Stack)({
   display: "flex",
   justifyContent: "space-around",
-  margin:'0px 0px',
+  // margin:'0px 0px',
 
   "& > *": {
     backgroundColor: "white", // Adds space between children
     padding: "20px",
     flexBasis: "100%",
     borderRadius: "10px",
+
+    '@media (max-width: 700px)': {
+      // margin:'20px',
+      // border:'2px solid red',
+      padding:"20px",
+      
+    },
   },
     // Media query for small devices
     '@media (max-width: 700px)': {
       flexDirection:'column',
-      margin:'10px 10px',
+      gap:'20px',
+      // border:'2px solid red',
     },
 });
 
@@ -47,7 +55,7 @@ const Offerings = () => {
   return (
     <OfferingsContainer>
       <Heading>What we offer</Heading>
-      <Container spacing={4} direction="row">
+      <Container spacing={1} direction="row">
         <Stack item xs={12} md={4}>
           <ColumnHeading>Our services</ColumnHeading>
           <ListItem>Modular kitchens</ListItem>
