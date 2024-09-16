@@ -1,7 +1,7 @@
 // import React from 'react';
 import { Box, Typography, Grid } from "@mui/material";
 import { styled } from "@mui/system";
-import img from "../assets/image1.png"
+// import img from "../assets/image1.png"
 
 const NewsContainer = styled(Box)({
   backgroundColor: "#f8f8f8",
@@ -13,19 +13,21 @@ const NewsItem = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  marginBottom: "20px",
+  margin: " 10px 20px",
+  boxShadow:"0px 2px 0px black",
+  height:"130px"
 });
 
-const NewsLogo = styled(Box)({
-  marginBottom: "10px",
+// const NewsLogo = styled(Box)({
+//   marginBottom: "10px",
 
-  '& img': {
-    width: '150px',
-    height: '150px',
-    borderRadius: '50%',
-    border: '2px solid blue',
-  },
-});
+//   '& img': {
+//     width: '150px',
+//     height: '150px',
+//     borderRadius: '50%',
+//     border: '2px solid blue',
+//   },
+// });
 
 const NewsSection = () => {
   return (
@@ -36,12 +38,12 @@ const NewsSection = () => {
       <Grid container spacing={4}>
         <Grid item xs={12} md={3}>
           <NewsItem>
-            <NewsLogo>
+            {/* <NewsLogo>
               <img
                 src={img}
                 alt="The Economic Times"
               />
-            </NewsLogo>
+            </NewsLogo> */}
             <Typography variant="body1">
               Livspace said it crossed the billion-dollar valuation mark after
               raising $180 million in a late-stage funding round led by KKR & Co
@@ -51,9 +53,9 @@ const NewsSection = () => {
         </Grid>
         <Grid item xs={12} md={3}>
           <NewsItem>
-            <NewsLogo>
+            {/* <NewsLogo>
               <img src={img} alt="mint" />
-            </NewsLogo>
+            </NewsLogo> */}
             <Typography variant="body1">
               Livspace has joined the unicorn club after the online home décor
               startup backed by private equity firm TPG raised $180 mn at a
@@ -63,9 +65,9 @@ const NewsSection = () => {
         </Grid>
         <Grid item xs={12} md={3}>
           <NewsItem>
-            <NewsLogo>
+            {/* <NewsLogo>
               <img src={img} alt="ARCHITECT" />
-            </NewsLogo>
+            </NewsLogo> */}
             <Typography variant="body1">
               The 23,000 sq-ft Bengaluru centre, designed by FITCH Singapore,
               combines inspiration, information and technology ...
@@ -74,12 +76,12 @@ const NewsSection = () => {
         </Grid>
         <Grid item xs={12} md={3}>
           <NewsItem>
-            <NewsLogo>
+            {/* <NewsLogo>
               <img
                 src={img}
                 alt="The Economic Times"
               />
-            </NewsLogo>
+            </NewsLogo> */}
             <Typography variant="body1">
               The company has also opened Experience Centres (ECs) spanning
               1500 sq ft each in prime locations in all four cities ...
