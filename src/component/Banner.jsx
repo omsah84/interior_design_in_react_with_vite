@@ -2,13 +2,19 @@ import { Box, Typography, Button } from '@mui/material';
 import { styled } from '@mui/system';
 
 const BannerContainer = styled(Box)({
-  backgroundColor: '#FFC0CB',
+  backgroundColor: '#f2e2e5',
   padding: '40px 20px',
   textAlign: 'center',
+  display:"flex",
+  flexDirection:"column",
+  justifyContent:"center",
+  alignItems:"center",
+  height:"300px"
+
 });
 
 const Heading = styled(Typography)({
-  fontSize: '24px',
+  fontSize: '30px',
   fontWeight: 'bold',
   color: '#000',
   marginBottom: '20px',
@@ -18,6 +24,8 @@ const Paragraph = styled(Typography)({
   fontSize: '16px',
   color: '#000',
   marginBottom: '30px',
+  width:"80%",
+  textAlign: 'center',
 });
 
 const ActionButton = styled(Button)({
