@@ -2,7 +2,7 @@
 import { Box, Typography, Button } from "@mui/material";
 import { styled } from "@mui/system";
 import Slider from "react-slick";
-import img from "../assets/image1.png";
+import img from "../assets/estimatorImg.png";
 
 const EstimatorContainer = styled(Box)({
   backgroundColor: "#fff",
@@ -63,9 +63,9 @@ const PriceEstimator = () => {
             src={img}
             alt="Example"
             style={{
-              width: "150px",
+              width: "200px",
               height: "150px",
-              borderRadius: "50%", // Circular image
+              // borderRadius: "50%", // Circular image
               margin: "auto", // Centers the image
               display: "block", // Ensures margin auto works
             }}
@@ -78,13 +78,13 @@ const PriceEstimator = () => {
           <EstimatorButton variant="contained">CALCULATE</EstimatorButton>
         </Box>
         <Box>
-          <img
+        <img
             src={img}
             alt="Example"
             style={{
-              width: "150px",
+              width: "200px",
               height: "150px",
-              borderRadius: "50%", // Circular image
+              // borderRadius: "50%", // Circular image
               margin: "auto", // Centers the image
               display: "block", // Ensures margin auto works
             }}
@@ -97,13 +97,13 @@ const PriceEstimator = () => {
           <EstimatorButton variant="contained">CALCULATE</EstimatorButton>
         </Box>
         <Box>
-          <img
+        <img
             src={img}
             alt="Example"
             style={{
-              width: "150px",
+              width: "200px",
               height: "150px",
-              borderRadius: "50%", // Circular image
+              // borderRadius: "50%", // Circular image
               margin: "auto", // Centers the image
               display: "block", // Ensures margin auto works
             }}
@@ -119,3 +119,4 @@ const PriceEstimator = () => {
 };
 
 export default PriceEstimator;
+

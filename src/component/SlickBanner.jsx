@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import { Box, Typography, Button } from "@mui/material";
 import { styled } from "@mui/system";
-import img from "../assets/image1.png";
+import img from "../assets/Royal.jpg";
 
 const BannerContainer = styled(Box)({
   padding: "40px 20px",
@@ -25,9 +25,9 @@ const SlideContainer = styled(Box)({
 });
 
 const SlideImage = styled("img")({
-  width: "100px",
-  height: "100px",
-  borderRadius: "50%",
+  width: "250px",
+  height: "250px",
+  borderRadius: "25%",
   objectFit: "cover", // Ensure the image retains its aspect ratio
   marginBottom: "10px", // Add some space between image and title
   margin: "0 auto",
@@ -106,9 +106,9 @@ const Banner = () => {
         </SlideContainer>
         <SlideContainer>
           <SlideImage src={img} alt="Classic Indian Bedroom" />
-          <SlideTitle>Classic Indian Bedroom</SlideTitle>
+          <SlideTitle>Monochromatic Grey 2 BHK</SlideTitle>
           <SlideDescription>
-            Bring in traditional elegance to your bedroom.
+            Add the cloudy hues to your space.
           </SlideDescription>
           <ActionButton variant="contained">GET FREE QUOTE</ActionButton>
         </SlideContainer>
