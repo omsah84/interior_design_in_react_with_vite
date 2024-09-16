@@ -11,7 +11,8 @@ const Container = styled("div")({
   backgroundRepeat: "no-repeat", // Prevents the image from repeating
   display: "flex",
   alignItems: "center",
-  gap:"100px"
+  gap:"100px",
+
 });
 
 const Text = styled("div")({
@@ -20,12 +21,20 @@ const Text = styled("div")({
   color: "white",
   textAlign: "center",
   fontWeight: "600",
-  padding:'30px 0px'
+  padding:'30px 0px',
+  // Media query for small devices
+  '@media (max-width: 900px)': {
+    width:"100%",
+    fontSize:"20px",
+    fontWeight:'500',
+  },
+
 });
 
 const Form = styled("div")({
-    '@media (max-width:600px)': {
-        display:"none"
+    // Media query for small devices
+    '@media (max-width: 900px)': {
+        display:'none',
       },
 });
 

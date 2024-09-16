@@ -9,7 +9,12 @@ const BannerContainer = styled(Box)({
   flexDirection:"column",
   justifyContent:"center",
   alignItems:"center",
-  height:"300px"
+  height:"300px",
+  // Media query for small devices
+  '@media (max-width: 600px)': {
+    padding:'10px',
+    height:'100%',
+  },
 
 });
 
@@ -18,6 +23,10 @@ const Heading = styled(Typography)({
   fontWeight: 'bold',
   color: '#000',
   marginBottom: '20px',
+  // Media query for small devices
+  '@media (max-width: 600px)': {
+    fontSize:'25px'
+  },
 });
 
 const Paragraph = styled(Typography)({
@@ -26,6 +35,10 @@ const Paragraph = styled(Typography)({
   marginBottom: '30px',
   width:"80%",
   textAlign: 'center',
+    // Media query for small devices
+    '@media (max-width: 600px)': {
+      fontSize:'13px'
+    },
 });
 
 const ActionButton = styled(Button)({

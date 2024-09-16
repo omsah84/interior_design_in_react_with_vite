@@ -1,9 +1,10 @@
 // import React from 'react';
 import { Box, Typography, Grid } from "@mui/material";
 import { styled } from "@mui/system";
+import img from "../assets/image1.png"
 
 const NewsContainer = styled(Box)({
-  backgroundColor: "#fff",
+  backgroundColor: "#f8f8f8",
   padding: "40px 20px",
   textAlign: "center",
 });
@@ -16,9 +17,14 @@ const NewsItem = styled(Box)({
 });
 
 const NewsLogo = styled(Box)({
-  width: "100px",
-  height: "auto",
   marginBottom: "10px",
+
+  '& img': {
+    width: '150px',
+    height: '150px',
+    borderRadius: '50%',
+    border: '2px solid blue',
+  },
 });
 
 const NewsSection = () => {
@@ -32,7 +38,7 @@ const NewsSection = () => {
           <NewsItem>
             <NewsLogo>
               <img
-                src="path/to/economic-times-logo.png"
+                src={img}
                 alt="The Economic Times"
               />
             </NewsLogo>
@@ -46,7 +52,7 @@ const NewsSection = () => {
         <Grid item xs={12} md={3}>
           <NewsItem>
             <NewsLogo>
-              <img src="path/to/mint-logo.png" alt="mint" />
+              <img src={img} alt="mint" />
             </NewsLogo>
             <Typography variant="body1">
               Livspace has joined the unicorn club after the online home décor
@@ -58,7 +64,7 @@ const NewsSection = () => {
         <Grid item xs={12} md={3}>
           <NewsItem>
             <NewsLogo>
-              <img src="path/to/architect-logo.png" alt="ARCHITECT" />
+              <img src={img} alt="ARCHITECT" />
             </NewsLogo>
             <Typography variant="body1">
               The 23,000 sq-ft Bengaluru centre, designed by FITCH Singapore,
@@ -70,7 +76,7 @@ const NewsSection = () => {
           <NewsItem>
             <NewsLogo>
               <img
-                src="path/to/economic-times-logo.png"
+                src={img}
                 alt="The Economic Times"
               />
             </NewsLogo>

@@ -3,12 +3,15 @@ import { Box, Typography, Button } from '@mui/material';
 import { styled } from '@mui/system';
 
 const ConnectContainer = styled(Box)({
-  backgroundColor: '#fff',
-  padding: '40px 20px',
+  backgroundColor: '#f1eded',
+  padding: '50px 20px',
   textAlign: 'center',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  height:"300px",
+//   border:"2px solid red",
+  
 });
 
 const ButtonsContainer = styled(Box)({

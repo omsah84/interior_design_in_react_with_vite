@@ -3,7 +3,7 @@ import { Box, Typography, Button } from '@mui/material';
 import { styled } from '@mui/system';
 
 const BannerContainer = styled(Box)({
-  backgroundColor: '#6A1B9A', // Purple background
+  backgroundColor: '#5719f4', // Purple background
   padding: '40px 20px',
   textAlign: 'center',
   color: '#FFF',

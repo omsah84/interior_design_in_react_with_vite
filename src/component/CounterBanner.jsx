@@ -2,22 +2,33 @@ import { Box, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 
 const BannerContainer = styled(Box)({
-  backgroundColor: '#4CAF50', // Green background
+  backgroundColor: '#eef2ee', // Green background
   padding: '40px 20px',
   textAlign: 'center',
-  color: '#FFF', // White text
+  color: 'black', // White text
 });
 
 const Heading = styled(Typography)({
   fontSize: '24px',
   fontWeight: 'bold',
   marginBottom: '20px',
+    // Media query for small devices
+    '@media (max-width: 600px)': {
+        fontSize:'20px'
+      },
 });
 
 const StatBox = styled(Box)({
   display: 'flex',
   justifyContent: 'space-around',
+//   flexDirection:"column",
   marginBottom: '20px',
+    // Media query for small devices
+    '@media (max-width: 600px)': {
+        flexDirection:"column",
+        gap:"20px",
+
+      },
 });
 
 const StatItem = styled(Box)({
@@ -27,6 +38,10 @@ const StatItem = styled(Box)({
 const StatNumber = styled(Typography)({
   fontSize: '32px',
   fontWeight: 'bold',
+    // Media query for small devices
+    '@media (max-width: 600px)': {
+        fontSize:'25px'
+      },
 });
 
 const StatLabel = styled(Typography)({

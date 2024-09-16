@@ -6,12 +6,15 @@ const FooterContainer = styled(Box)({
   backgroundColor: '#f8f8f8',
   padding: '20px',
   textAlign: 'center',
+ 
 });
 
 const FooterLink = styled(Link)({
   margin: '0 10px',
   color: '#000',
   textDecoration: 'none',
+  textAlign:"center",
+  fontSize:'10px',
   '&:hover': {
     textDecoration: 'underline',
   },
@@ -20,10 +23,10 @@ const FooterLink = styled(Link)({
 const Footer = () => {
   return (
     <FooterContainer>
-      <Typography variant="body2" color="textSecondary">
-        © 2022 Livspace.com - All Rights Reserved.
+      <Typography variant="body4" color="textSecondary">
+        © 2024 domain.com - All Rights Reserved.
       </Typography>
-      <Box mt={2}>
+      <Box mt={3}>
         <FooterLink href="#">Interior designers in Pune</FooterLink>
         <FooterLink href="#">Interior designers in Mumbai</FooterLink>
         <FooterLink href="#">Interior designers in Bangalore</FooterLink>
