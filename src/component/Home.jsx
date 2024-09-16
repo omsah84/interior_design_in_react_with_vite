@@ -3,7 +3,7 @@ import { styled } from '@mui/system'; // Correct import
 
 // Using the styled utility correctly
 const Container = styled('div')({
- height:'400px',
+ height:'500px',
  backgroundColor:'gray',
  textAlign:'center'
  
