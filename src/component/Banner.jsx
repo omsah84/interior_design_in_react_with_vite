@@ -1,5 +1,8 @@
 import { Box, Typography, Button } from '@mui/material';
 import { styled } from '@mui/system';
+import ContactUs from "./ContactUs";
+import { useState } from "react";
+import Modal from "@mui/material/Modal";
 
 const BannerContainer = styled(Box)({
   backgroundColor: '#f2e2e5',
@@ -49,14 +52,35 @@ const ActionButton = styled(Button)({
   },
 });
 
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
+
 const Banner = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <BannerContainer>
       <Heading>The home design you crave</Heading>
       <Paragraph>
         When you give your home the Livspace touch, you get both beauty and functionality. We employ state-of-the-art technology to ensure your home features a flawless look that will last a very long time.
       </Paragraph>
-      <ActionButton variant="contained">BOOK FREE CONSULTATION</ActionButton>
+      <ActionButton onClick={handleOpen} variant="contained">BOOK FREE CONSULTATION</ActionButton>
+      <Modal
+          open={open}
+          onClick={handleClose}
+        >
+          <ContactUs sx={style} />
+        </Modal>
     </BannerContainer>
   );
 };

@@ -1,6 +1,9 @@
 // import React from 'react';
 import { Box, Typography, Button } from "@mui/material";
 import { styled } from "@mui/system";
+import ContactUs from "./ContactUs";
+import { useState } from "react";
+import Modal from "@mui/material/Modal";
 
 const HowItWorksContainer = styled(Box)({
   backgroundColor: "#fff",
@@ -48,7 +51,22 @@ const StepText = styled(Typography)({
   },
 });
 
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
+
 const HowItWorks = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <HowItWorksContainer>
       <Typography variant="h4" gutterBottom>
@@ -77,9 +95,12 @@ const HowItWorks = () => {
           <StepText>Move in and enjoy!</StepText>
         </StepContainer>
       </Container>
-      <Button variant="contained" color="primary">
+      <Button onClick={handleOpen} variant="contained" color="primary">
         BOOK FREE CONSULTATION
       </Button>
+      <Modal open={open} onClick={handleClose}>
+        <ContactUs sx={style} />
+      </Modal>
     </HowItWorksContainer>
   );
 };

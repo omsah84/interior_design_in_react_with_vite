@@ -31,19 +31,18 @@ const Container = styled(Stack)({
     flexBasis: "100%",
     borderRadius: "10px",
 
-    '@media (max-width: 700px)': {
+    "@media (max-width: 700px)": {
       // margin:'20px',
       // border:'2px solid red',
-      padding:"20px",
-      
+      padding: "20px",
     },
   },
-    // Media query for small devices
-    '@media (max-width: 700px)': {
-      flexDirection:'column',
-      gap:'20px',
-      // border:'2px solid red',
-    },
+  // Media query for small devices
+  "@media (max-width: 700px)": {
+    flexDirection: "column",
+    gap: "20px",
+    // border:'2px solid red',
+  },
 });
 
 const ListItem = styled(Typography)({
@@ -57,6 +56,11 @@ const Offerings = () => {
       <Heading>What we offer</Heading>
       <Container spacing={1} direction="row">
         <Stack item xs={12} md={4}>
+          <ColumnHeading>Warranty</ColumnHeading>
+          <ListItem>FLAT 10-year warranty on modular products</ListItem>
+          <ListItem>Up to 1-year on-site service warranty</ListItem>
+        </Stack>
+        <Stack item xs={12} md={4}>
           <ColumnHeading>Our services</ColumnHeading>
           <ListItem>Modular kitchens</ListItem>
           <ListItem>Modular wardrobes</ListItem>
@@ -67,19 +71,10 @@ const Offerings = () => {
           <ListItem>False ceiling</ListItem>
           <ListItem>Wall design & painting</ListItem>
         </Stack>
-        <Stack item xs={12} md={4}>
-          <ColumnHeading>Warranty</ColumnHeading>
-          <ListItem>FLAT 10-year warranty on modular products</ListItem>
-          <ListItem>Up to 1-year on-site service warranty</ListItem>
-          <ListItem>FLAT 10-year warranty on modular products</ListItem>
-          <ListItem>Up to 1-year on-site service warranty</ListItem>
-          <ListItem>FLAT 10-year warranty on modular products</ListItem>
-          <ListItem>Up to 1-year on-site service warranty</ListItem>
-        </Stack>
+
         <Stack item xs={12} md={4}>
           <ColumnHeading>Technology & science</ColumnHeading>
           <ListItem>AquaBloc® Technology</ListItem>
-          <ListItem>AntiBubble® Technology</ListItem>
           <ListItem>DuraBuild™ Technology</ListItem>
           <ListItem>Design Science</ListItem>
         </Stack>
