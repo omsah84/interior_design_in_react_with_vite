@@ -7,7 +7,9 @@ import { styled } from '@mui/system'; // Correct import
 
 const Container = styled(Box)({
   display:'flex',
-  justifyContent:'space-around'
+  justifyContent:'space-around',
+  height:'150px',
+  alignItems:"center"
 });
 
 const IconsSection = () => {
