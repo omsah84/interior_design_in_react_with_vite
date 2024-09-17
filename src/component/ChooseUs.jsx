@@ -12,7 +12,6 @@ const Container = styled(Box)({
   // border:'2px solid red',
   "@media (max-width:700px)": {
     height:"100px",
-    border:"3px solid red",
   },
 });
 
