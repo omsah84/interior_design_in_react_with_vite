@@ -10,7 +10,10 @@ const Container = styled(Box)({
   height: "130px",
   width:"100%",
   // border:'2px solid red',
-  "@media (max-width:600px)": {},
+  "@media (max-width:700px)": {
+    height:"100px",
+    border:"3px solid red",
+  },
 });
 
 // Carousel configuration
@@ -26,7 +29,7 @@ const settings = {
     {
       breakpoint: 700, // For screens up to 768px wide
       settings: {
-        slidesToShow: 1, // Show only 1 slide
+        slidesToShow: 2, // Show only 1 slide
         slidesToScroll: 1,
       },
     },
