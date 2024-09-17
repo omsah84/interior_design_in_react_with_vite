@@ -1,21 +1,26 @@
 import { styled } from "@mui/system";
-import Homeimg from "../assets/HomeImg.jpg";
 import ContactUs from "./ContactUs";
 import Slider from "react-slick"; // Import the carousel
+import Homeimg0 from "../assets/Homeimg1.jpg";
+import Homeimg1 from "../assets/Homeimg1.jpg";
+import Homeimg2 from "../assets/Homeimg2.jpg";
+import Homeimg3 from "../assets/Homeimg3.jpg";
+import Homeimg4 from "../assets/Homeimg4.jpg";
+
 
 const MainContainer = styled("div")({
   height: "500px",
   width: "100%",
 });
 
-const Container = styled("div")({
+// Container accepts image as a prop
+const Container = styled("div")(({ image }) => ({
   height: "500px",
-  backgroundImage: `url(${Homeimg})`,
+  backgroundImage: `url(${image})`, // Use the image prop here
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
-  // border:"2px solid red",
-});
+}));
 
 const Text = styled("div")({
   fontSize: "25px",
@@ -70,7 +75,7 @@ const Home = () => {
     <>
       <MainContainer>
         <Slider {...settings}>
-          <Container>
+          <Container image={Homeimg0}>
             <Text>
               Transform your home with stunning, affordable interiors.
               Experience exceptional craftsmanship and on-time delivery with
@@ -80,7 +85,7 @@ const Home = () => {
               <ContactUs />
             </Form>
           </Container>
-          <Container>
+          <Container image={Homeimg1}>
             <Text>
               Transform your home with stunning, affordable interiors.
               Experience exceptional craftsmanship and on-time delivery with
@@ -90,7 +95,27 @@ const Home = () => {
               <ContactUs />
             </Form>
           </Container>
-          <Container>
+          <Container image={Homeimg2}>
+            <Text>
+              Transform your home with stunning, affordable interiors.
+              Experience exceptional craftsmanship and on-time delivery with
+              unparalleled precision.
+            </Text>
+            <Form>
+              <ContactUs />
+            </Form>
+          </Container>
+          <Container image={Homeimg3}>
+            <Text>
+              Transform your home with stunning, affordable interiors.
+              Experience exceptional craftsmanship and on-time delivery with
+              unparalleled precision.
+            </Text>
+            <Form>
+              <ContactUs />
+            </Form>
+          </Container>
+          <Container image={Homeimg4}>
             <Text>
               Transform your home with stunning, affordable interiors.
               Experience exceptional craftsmanship and on-time delivery with
