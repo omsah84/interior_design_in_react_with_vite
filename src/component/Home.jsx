@@ -2,17 +2,15 @@ import { styled } from "@mui/system";
 import Homeimg from "../assets/HomeImg.jpg";
 import ContactUs from "./ContactUs";
 
-// Correct way to apply background image using styled
 const Container = styled("div")({
   height: "500px",
-  backgroundImage: `url(${Homeimg})`, // Correct way to reference the image
-  backgroundSize: "cover", // Ensures the image covers the entire container
-  backgroundPosition: "center", // Centers the image
-  backgroundRepeat: "no-repeat", // Prevents the image from repeating
+  backgroundImage: `url(${Homeimg})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
   display: "flex",
   alignItems: "center",
-  gap:"100px",
-
+  gap: "100px",
 });
 
 const Text = styled("div")({
@@ -21,21 +19,20 @@ const Text = styled("div")({
   color: "white",
   textAlign: "center",
   fontWeight: "600",
-  padding:'30px 0px',
+  padding: "30px 0px",
   // Media query for small devices
-  '@media (max-width: 900px)': {
-    width:"100%",
-    fontSize:"20px",
-    fontWeight:'500',
+  "@media (max-width: 900px)": {
+    width: "100%",
+    fontSize: "20px",
+    fontWeight: "500",
   },
-
 });
 
 const Form = styled("div")({
-    // Media query for small devices
-    '@media (max-width: 900px)': {
-        display:'none',
-      },
+  // Media query for small devices
+  "@media (max-width: 900px)": {
+    display: "none",
+  },
 });
 
 const Home = () => {
@@ -48,7 +45,7 @@ const Home = () => {
           precision.
         </Text>
         <Form>
-            <ContactUs/>
+          <ContactUs />
         </Form>
       </Container>
     </>
