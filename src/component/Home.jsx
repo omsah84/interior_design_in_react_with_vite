@@ -26,7 +26,7 @@ const Text = styled("div")({
   fontSize: "25px",
   width: "50%",
   height: "100%",
-  color: "white",
+  color: "black",
   textAlign: "center",
   fontWeight: "600",
   padding: "30px 0px",

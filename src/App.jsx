@@ -1,7 +1,7 @@
 
 import Header from "./component/Header";
 import Home from "./component/Home";
-import IconsSection from "./component/IconsSection";
+import ChooseUs from "./component/ChooseUs";
 import Banner from "./component/Banner";
 import CounterBanner from "./component/CounterBanner";
 import SlickBanner from "./component/SlickBanner";
@@ -22,7 +22,7 @@ function App() {
     <>
       <Header />
       <Home />
-      <IconsSection />
+      <ChooseUs />
       <Banner />
       <CounterBanner />
       <SlickBanner />
