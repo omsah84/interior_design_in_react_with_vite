@@ -3,8 +3,8 @@ import Header from "./component/Header";
 import Home from "./component/Home";
 import ChooseUs from "./component/ChooseUs";
 import HomeSpaceInterior from "./component/HomeSpaceInterior";
-import Banner from "./component/Banner";
 import CounterBanner from "./component/CounterBanner";
+import Banner from "./component/Banner";
 import SlickBanner from "./component/SlickBanner";
 import Testimonial from "./component/Testimonial";
 import PriceEstimator from "./component/PriceEstimator";
@@ -25,8 +25,8 @@ function App() {
       <Home />
       <ChooseUs />
       <HomeSpaceInterior/>
-      <Banner />
       <CounterBanner />
+      <Banner />
       <SlickBanner />
       <Testimonial />
       <PriceEstimator />

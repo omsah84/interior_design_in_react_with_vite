@@ -54,7 +54,7 @@ const HomeSpaceInterior = () => {
             color="primary"
             sx={{ marginTop: "10px" }}
           >
-            About Home Space Interior
+            About InteriorCafe
           </Button>
         </CardContent>
       </Container>

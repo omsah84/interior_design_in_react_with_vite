@@ -1,51 +1,50 @@
-import { Box, Typography } from '@mui/material';
-import { styled } from '@mui/system';
+import { Box, Typography } from "@mui/material";
+import { styled } from "@mui/system";
 
 const BannerContainer = styled(Box)({
-  backgroundColor: '#eef2ee', // Green background
-  padding: '40px 20px',
-  textAlign: 'center',
-  color: 'black', // White text
+  backgroundColor: "white", // Green background
+  padding: "40px 20px",
+  textAlign: "center",
+  color: "black", // White text
 });
 
 const Heading = styled(Typography)({
-  fontSize: '24px',
-  fontWeight: 'bold',
-  marginBottom: '20px',
-    // Media query for small devices
-    '@media (max-width: 600px)': {
-        fontSize:'20px'
-      },
+  fontSize: "24px",
+  fontWeight: "bold",
+  marginBottom: "20px",
+  // Media query for small devices
+  "@media (max-width: 600px)": {
+    fontSize: "20px",
+  },
 });
 
 const StatBox = styled(Box)({
-  display: 'flex',
-  justifyContent: 'space-around',
-//   flexDirection:"column",
-  marginBottom: '20px',
-    // Media query for small devices
-    '@media (max-width: 600px)': {
-        flexDirection:"column",
-        gap:"20px",
-
-      },
+  display: "flex",
+  justifyContent: "space-around",
+  //   flexDirection:"column",
+  marginBottom: "20px",
+  // Media query for small devices
+  "@media (max-width: 600px)": {
+    flexDirection: "column",
+    gap: "20px",
+  },
 });
 
 const StatItem = styled(Box)({
-  textAlign: 'center',
+  textAlign: "center",
 });
 
 const StatNumber = styled(Typography)({
-  fontSize: '32px',
-  fontWeight: 'bold',
-    // Media query for small devices
-    '@media (max-width: 600px)': {
-        fontSize:'25px'
-      },
+  fontSize: "32px",
+  fontWeight: "bold",
+  // Media query for small devices
+  "@media (max-width: 600px)": {
+    fontSize: "25px",
+  },
 });
 
 const StatLabel = styled(Typography)({
-  fontSize: '16px',
+  fontSize: "16px",
 });
 
 const CounterBanner = () => {
@@ -54,20 +53,20 @@ const CounterBanner = () => {
       <Heading>Let our numbers do the talking!</Heading>
       <StatBox>
         <StatItem>
-          <StatNumber>75000+</StatNumber>
-          <StatLabel>#LivspaceHomes</StatLabel>
+          <StatNumber>7500+</StatNumber>
+          <StatLabel>InteriorCafe</StatLabel>
         </StatItem>
         <StatItem>
-          <StatNumber>3500+</StatNumber>
-          <StatLabel>designers</StatLabel>
+          <StatNumber>350+</StatNumber>
+          <StatLabel>Designers</StatLabel>
         </StatItem>
         <StatItem>
           <StatNumber>40</StatNumber>
-          <StatLabel>cities</StatLabel>
+          <StatLabel>Cities</StatLabel>
         </StatItem>
         <StatItem>
-          <StatNumber>4</StatNumber>
-          <StatLabel>countries</StatLabel>
+          <StatNumber>2</StatNumber>
+          <StatLabel>Countries</StatLabel>
         </StatItem>
       </StatBox>
     </BannerContainer>
