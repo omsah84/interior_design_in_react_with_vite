@@ -1,5 +1,5 @@
 import { Box, Typography, Button } from "@mui/material";
-import { styled, keyframes } from "@mui/system";
+import { styled } from "@mui/system";
 import ContactUs from "./ContactUs";
 import { useState } from "react";
 import Modal from "@mui/material/Modal";
@@ -77,12 +77,12 @@ const Banner = () => {
         trends, always ensuring they align perfectly with our clients needs.
       </Paragraph>
       <ActionButton
-        sx={{
-          animation: `${fadeInOut} 4s ease-in-out infinite`,
-          color: "text.primary", // Using MUI theme's text color
-          textAlign: "center", // Center align text
+        // sx={{
+        //   animation: `${fadeInOut} 4s ease-in-out infinite`,
+        //   color: "text.primary", // Using MUI theme's text color
+        //   textAlign: "center", // Center align text
     
-        }}
+        // }}
         onClick={handleOpen}
         variant="contained"
       >
@@ -97,18 +97,18 @@ const Banner = () => {
 
 export default Banner;
 
-const fadeInOut = keyframes`
-  0% {
+// const fadeInOut = keyframes`
+//   0% {
 
-    width: 230px;
-    height: 40px;
-  }
-  50% {
-    width: 250px;
-    height: 50px;
-  }
-  100% {
-    width: 230px;
-    height: 40px;
-  }
-`;
+//     width: 230px;
+//     height: 40px;
+//   }
+//   50% {
+//     width: 250px;
+//     height: 50px;
+//   }
+//   100% {
+//     width: 230px;
+//     height: 40px;
+//   }
+// `;

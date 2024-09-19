@@ -84,7 +84,7 @@ const Home = () => {
     <>
       <MainContainer>
         <Slider {...settings}>
-          <Container image={Homeimg0}>
+          <Container image={Homeimg1}>
             <Text>
               Transform your home with stunning, affordable interiors.
               Experience exceptional craftsmanship and on-time delivery with
@@ -94,7 +94,7 @@ const Home = () => {
               <ContactUs />
             </Form>
           </Container>
-          <Container image={Homeimg1}>
+          <Container image={Homeimg0}>
 
             <Text>
               Transform your home with stunning, affordable interiors.

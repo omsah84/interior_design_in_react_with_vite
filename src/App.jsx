@@ -2,6 +2,7 @@
 import Header from "./component/Header";
 import Home from "./component/Home";
 import ChooseUs from "./component/ChooseUs";
+import HomeSpaceInterior from "./component/HomeSpaceInterior";
 import Banner from "./component/Banner";
 import CounterBanner from "./component/CounterBanner";
 import SlickBanner from "./component/SlickBanner";
@@ -23,6 +24,7 @@ function App() {
       <Header />
       <Home />
       <ChooseUs />
+      <HomeSpaceInterior/>
       <Banner />
       <CounterBanner />
       <SlickBanner />
