@@ -7,7 +7,6 @@ import Homeimg2 from "../assets/Homeimg2.jpg";
 import Homeimg3 from "../assets/Homeimg3.jpg";
 import Homeimg4 from "../assets/Homeimg4.jpg";
 
-
 const MainContainer = styled("div")({
   height: "500px",
   width: "100%",
@@ -20,13 +19,18 @@ const Container = styled("div")(({ image }) => ({
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
+
+
+
 }));
 
+
+
 const Text = styled("div")({
-  fontSize: "25px",
+  fontSize: "30px",
   width: "50%",
   height: "100%",
-  color: "black",
+  color: "white",
   textAlign: "center",
   fontWeight: "600",
   padding: "30px 0px",
@@ -35,6 +39,9 @@ const Text = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyCOntent: "center",
+  textShadow: "3px 4px 5px black, -2px -1px 1px red",
+
+
 
   // Media query for small devices
   "@media (max-width: 900px)": {
@@ -52,6 +59,8 @@ const Form = styled("div")({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+
+
 
   // Media query for small devices
   "@media (max-width: 900px)": {
@@ -86,6 +95,7 @@ const Home = () => {
             </Form>
           </Container>
           <Container image={Homeimg1}>
+
             <Text>
               Transform your home with stunning, affordable interiors.
               Experience exceptional craftsmanship and on-time delivery with
@@ -106,6 +116,7 @@ const Home = () => {
             </Form>
           </Container>
           <Container image={Homeimg3}>
+
             <Text>
               Transform your home with stunning, affordable interiors.
               Experience exceptional craftsmanship and on-time delivery with
@@ -116,6 +127,7 @@ const Home = () => {
             </Form>
           </Container>
           <Container image={Homeimg4}>
+
             <Text>
               Transform your home with stunning, affordable interiors.
               Experience exceptional craftsmanship and on-time delivery with

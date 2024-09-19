@@ -1,54 +1,54 @@
-import { Box, Typography, Button } from '@mui/material';
-import { styled } from '@mui/system';
+import { Box, Typography, Button } from "@mui/material";
+import { styled, keyframes } from "@mui/system";
 import ContactUs from "./ContactUs";
 import { useState } from "react";
 import Modal from "@mui/material/Modal";
 
 const BannerContainer = styled(Box)({
-  backgroundColor: '#f2e2e5',
-  padding: '40px 20px',
-  textAlign: 'center',
-  display:"flex",
-  flexDirection:"column",
-  justifyContent:"center",
-  alignItems:"center",
-  height:"300px",
+  backgroundColor: "#f9ecec",
+  padding: "40px 20px",
+  textAlign: "center",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  height: "300px",
   // Media query for small devices
-  '@media (max-width: 600px)': {
-    padding:'10px',
-    height:'100%',
+  "@media (max-width: 600px)": {
+    padding: "10px",
+    height: "100%",
   },
-
 });
 
 const Heading = styled(Typography)({
-  fontSize: '30px',
-  fontWeight: 'bold',
-  color: '#000',
-  marginBottom: '20px',
+  fontSize: "30px",
+  fontWeight: "bold",
+  color: "#000",
+  marginBottom: "20px",
   // Media query for small devices
-  '@media (max-width: 600px)': {
-    fontSize:'25px'
+  "@media (max-width: 600px)": {
+    fontSize: "25px",
   },
 });
 
 const Paragraph = styled(Typography)({
-  fontSize: '16px',
-  color: '#000',
-  marginBottom: '30px',
-  width:"80%",
-  textAlign: 'center',
-    // Media query for small devices
-    '@media (max-width: 600px)': {
-      fontSize:'13px'
-    },
+  fontSize: "16px",
+  color: "#000",
+  marginBottom: "30px",
+  width: "80%",
+  textAlign: "center",
+  // Media query for small devices
+  "@media (max-width: 600px)": {
+    fontSize: "13px",
+  },
 });
 
 const ActionButton = styled(Button)({
-  backgroundColor: '#FF0000',
-  color: '#FFF',
-  '&:hover': {
-    backgroundColor: '#D00000',
+  backgroundColor: "#093a84",
+  fontSize:"15px",
+  color: "white",
+  "&:hover": {
+    backgroundColor: "#D00000",
   },
 });
 
@@ -70,19 +70,45 @@ const Banner = () => {
   const handleClose = () => setOpen(false);
   return (
     <BannerContainer>
-      <Heading>The home design you crave</Heading>
+      <Heading>We don’t renovate spaces, we redefine them.</Heading>
       <Paragraph>
-        When you give your home the Livspace touch, you get both beauty and functionality. We employ state-of-the-art technology to ensure your home features a flawless look that will last a very long time.
+        Our approach to interior design harmonizes architecture, environmental
+        psychology, and product design. We carefully select colors, styles, and
+        trends, always ensuring they align perfectly with our clients needs.
       </Paragraph>
-      <ActionButton onClick={handleOpen} variant="contained">BOOK FREE CONSULTATION</ActionButton>
-      <Modal
-          open={open}
-          onClick={handleClose}
-        >
-          <ContactUs sx={style} />
-        </Modal>
+      <ActionButton
+        sx={{
+          animation: `${fadeInOut} 4s ease-in-out infinite`,
+          color: "text.primary", // Using MUI theme's text color
+          textAlign: "center", // Center align text
+    
+        }}
+        onClick={handleOpen}
+        variant="contained"
+      >
+        BOOK FREE CONSULTATION
+      </ActionButton>
+      <Modal open={open} onClick={handleClose}>
+        <ContactUs sx={style} />
+      </Modal>
     </BannerContainer>
   );
 };
 
 export default Banner;
+
+const fadeInOut = keyframes`
+  0% {
+
+    width: 230px;
+    height: 40px;
+  }
+  50% {
+    width: 250px;
+    height: 50px;
+  }
+  100% {
+    width: 230px;
+    height: 40px;
+  }
+`;
