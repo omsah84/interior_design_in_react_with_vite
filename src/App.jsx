@@ -5,7 +5,7 @@ import ChooseUs from "./component/ChooseUs";
 import HomeSpaceInterior from "./component/HomeSpaceInterior";
 import CounterBanner from "./component/CounterBanner";
 import Banner from "./component/Banner";
-import SlickBanner from "./component/SlickBanner";
+import HomeStyle from "./component/HomeStyle";
 import Testimonial from "./component/Testimonial";
 import PriceEstimator from "./component/PriceEstimator";
 import Offerings from "./component/Offerings";
@@ -27,7 +27,7 @@ function App() {
       <HomeSpaceInterior/>
       <CounterBanner />
       <Banner />
-      <SlickBanner />
+      <HomeStyle />
       <Testimonial />
       <PriceEstimator />
       <Offerings />

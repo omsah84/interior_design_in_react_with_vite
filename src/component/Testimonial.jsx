@@ -19,18 +19,18 @@ const TestimonialText = styled(Typography)({
   width:"80%",
 });
 
-const Author = styled(Typography)({
-  fontSize: '16px',
-  fontWeight: 'bold',
-  color: '#555',
-});
+// const Author = styled(Typography)({
+//   fontSize: '16px',
+//   fontWeight: 'bold',
+//   color: '#555',
+// });
 
 const Testimonial = () => {
   return (
     <TestimonialContainer>
       <TestimonialText>
-        Our experience with Livspace was pleasurable because of the project managers. The work got done before 45 days just the way we wanted it to be.
-      <Author>Swati and Gaurav</Author>
+      Our experience with InteriorCafe was enjoyable thanks to the project managers. The work was completed in less than 45 days, exactly as we had envisioned.
+      {/* <Author>Swati and Gaurav</Author> */}
       </TestimonialText>
     </TestimonialContainer>
   );
