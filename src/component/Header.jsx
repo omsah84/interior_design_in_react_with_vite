@@ -2,10 +2,10 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+// import ContactUs from "./ContactUs";
 import { styled } from "@mui/system";
-import ContactUs from "./ContactUs";
-import { useState } from "react";
-import Modal from "@mui/material/Modal";
+// import { useState } from "react";
+
 // import { Box } from "@mui/material";
 
 const Logo = styled("div")({
@@ -22,11 +22,24 @@ const StyledButton = styled(Button)({
   },
 });
 
-const Header = () => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+// const Container = styled("div")({
+//   position: "absolute",
+//   // top: '400px',
+//   left: "50%",
+//   transform: "translate(-50%, 50%)",
+//   zIndex: "1",
+// });
 
+const Header = () => {
+  // const [open, setOpen] = useState(false);
+
+  // const handleOpen = () => {
+  //   if (open === false) {
+  //     setOpen(true);
+  //   } else {
+  //     setOpen(false);
+  //   }
+  // };
   return (
     <AppBar position="static" color="transparent" elevation={0}>
       <Toolbar>
@@ -36,10 +49,15 @@ const Header = () => {
           </Typography>
           <div style={{ color: "#f00", marginLeft: 5 }}>▲</div>
         </Logo>
-        <StyledButton onClick={handleOpen}>GET STARTED</StyledButton>
-        <Modal open={open} onClick={handleClose}>
-          <ContactUs />
-        </Modal>
+        {/* <StyledButton onClick={handleOpen}>GET STARTED</StyledButton> */}
+        <StyledButton>GET STARTED</StyledButton>
+        {/* {open && true ? (
+          <Container>
+            <ContactUs />
+          </Container>
+        ) : (
+          <></>
+        )} */}
       </Toolbar>
     </AppBar>
   );
