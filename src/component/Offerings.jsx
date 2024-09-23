@@ -1,5 +1,5 @@
 // import React from 'react'
-import { Box, Typography, Stack } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 const OfferingsContainer = styled(Box)({
@@ -14,47 +14,53 @@ const Heading = styled(Typography)({
   marginBottom: "20px",
 });
 
-const ColumnHeading = styled(Typography)({
-  fontSize: "20px",
-  fontWeight: "bold",
-  marginBottom: "10px",
-});
+// const ColumnHeading = styled(Typography)({
+//   fontSize: "20px",
+//   fontWeight: "bold",
+//   marginBottom: "10px",
+// });
 
-const Container = styled(Stack)({
-  display: "flex",
-  justifyContent: "space-around",
-  // margin:'0px 0px',
+// const Container = styled(Stack)({
+//   display: "flex",
+//   justifyContent: "space-around",
+//   // margin:'0px 0px',
 
-  "& > *": {
-    backgroundColor: "white", // Adds space between children
-    padding: "20px",
-    flexBasis: "100%",
-    borderRadius: "10px",
+//   "& > *": {
+//     backgroundColor: "white", // Adds space between children
+//     padding: "20px",
+//     flexBasis: "100%",
+//     borderRadius: "10px",
 
-    "@media (max-width: 700px)": {
-      // margin:'20px',
-      // border:'2px solid red',
-      padding: "20px",
-    },
-  },
-  // Media query for small devices
-  "@media (max-width: 700px)": {
-    flexDirection: "column",
-    gap: "20px",
-    // border:'2px solid red',
-  },
-});
+//     "@media (max-width: 700px)": {
+//       // margin:'20px',
+//       // border:'2px solid red',
+//       padding: "20px",
+//     },
+//   },
+//   // Media query for small devices
+//   "@media (max-width: 700px)": {
+//     flexDirection: "column",
+//     gap: "20px",
+//     // border:'2px solid red',
+//   },
+// });
 
-const ListItem = styled(Typography)({
-  fontSize: "16px",
-  marginBottom: "5px",
-});
+// const ListItem = styled(Typography)({
+//   fontSize: "16px",
+//   marginBottom: "5px",
+// });
 
 const Offerings = () => {
   return (
     <OfferingsContainer>
       <Heading>What we offer</Heading>
-      <Container spacing={1} direction="row">
+      <Typography>
+        Our strength of proficient execution is backed by experience Designers
+        and Project Managers with rich experience in Interior designing, Space
+        Planning, Project execution services turning any space into a powerful
+        expression of the client’s personality.
+      </Typography>
+      {/* <Container spacing={1} direction="row">
         <Stack item xs={12} md={4}>
           <ColumnHeading>Warranty</ColumnHeading>
           <ListItem>FLAT 10-year warranty on modular products</ListItem>
@@ -78,7 +84,7 @@ const Offerings = () => {
           <ListItem>DuraBuild™ Technology</ListItem>
           <ListItem>Design Science</ListItem>
         </Stack>
-      </Container>
+      </Container> */}
     </OfferingsContainer>
   );
 };

@@ -6,7 +6,7 @@ import { useState } from "react";
 import Modal from "@mui/material/Modal";
 
 const BannerContainer = styled(Box)({
-  backgroundColor: "#5719f4", // Purple background
+  backgroundColor: "#5725d5", // Purple background
   padding: "40px 20px",
   textAlign: "center",
   color: "#FFF",

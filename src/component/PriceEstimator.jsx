@@ -53,10 +53,8 @@ const PriceEstimator = () => {
 
   return (
     <EstimatorContainer>
-      <Heading>Interior Price Estimator</Heading>
-      <SubHeading>
-        Calculate the approximate cost of doing up your interiors
-      </SubHeading>
+      <Heading>DesignCost Estimator</Heading>
+      <SubHeading>Estimate Your Interior Makeover Costs</SubHeading>
       <Slider {...settings}>
         <Box>
           <img
@@ -78,7 +76,7 @@ const PriceEstimator = () => {
           <EstimatorButton variant="contained">CALCULATE</EstimatorButton>
         </Box>
         <Box>
-        <img
+          <img
             src={img}
             alt="Example"
             style={{
@@ -97,7 +95,7 @@ const PriceEstimator = () => {
           <EstimatorButton variant="contained">CALCULATE</EstimatorButton>
         </Box>
         <Box>
-        <img
+          <img
             src={img}
             alt="Example"
             style={{
@@ -119,4 +117,3 @@ const PriceEstimator = () => {
 };
 
 export default PriceEstimator;
-

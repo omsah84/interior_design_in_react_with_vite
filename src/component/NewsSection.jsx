@@ -14,8 +14,9 @@ const NewsItem = styled(Box)({
   flexDirection: "column",
   alignItems: "center",
   margin: " 10px 20px",
-  boxShadow:"0px 2px 0px black",
-  height:"130px"
+  boxShadow: "0px 2px 0px black",
+  padding: "10px 0px",
+  // height:"160px"
 });
 
 // const NewsLogo = styled(Box)({
@@ -45,9 +46,9 @@ const NewsSection = () => {
               />
             </NewsLogo> */}
             <Typography variant="body1">
-              Livspace said it crossed the billion-dollar valuation mark after
-              raising $180 million in a late-stage funding round led by KKR & Co
-              ...
+              InteriorCafe said it crossed the billion-dollar valuation mark
+              after raising $180 million in a late-stage funding round led by
+              KKR & Co ...
             </Typography>
           </NewsItem>
         </Grid>
@@ -57,9 +58,9 @@ const NewsSection = () => {
               <img src={img} alt="mint" />
             </NewsLogo> */}
             <Typography variant="body1">
-              Livspace has joined the unicorn club after the online home décor
-              startup backed by private equity firm TPG raised $180 mn at a
-              valuation of over $1.2 bn ...
+              InteriorCafe has joined the unicorn club after the online home
+              décor startup backed by private equity firm TPG raised $180 mn at
+              a valuation of over $1.2 bn ...
             </Typography>
           </NewsItem>
         </Grid>
@@ -83,8 +84,8 @@ const NewsSection = () => {
               />
             </NewsLogo> */}
             <Typography variant="body1">
-              The company has also opened Experience Centres (ECs) spanning
-              1500 sq ft each in prime locations in all four cities ...
+              The company has also opened Experience Centres (ECs) spanning 1500
+              sq ft each in prime locations in all four cities ...
             </Typography>
           </NewsItem>
         </Grid>
