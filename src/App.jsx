@@ -16,6 +16,7 @@ import NewsSection from "./component/NewsSection";
 import ContactUs from "./component/ContactUs";
 import PromotionalBanner from "./component/PromotionalBanner";
 import Footer from "./component/Footer";
+import MessageIcon from "./component/MessageIcon";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
       <ContactUs/>
       <PromotionalBanner/>
       <Footer/>
+      <MessageIcon/>
     </>
   );
 }
