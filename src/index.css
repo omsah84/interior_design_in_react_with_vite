@@ -2,7 +2,7 @@
   margin    : 0;
   padding   : 0;
   box-sizing: border-box;
-  
+
 }
 
 body {
@@ -18,6 +18,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.slick-arrow{
-  display: none;
+
+.slick-prev {
+  left   : 0px;
+  display: none !important;
+}
+
+.slick-next {
+  display: none !important;
+  right  : 0px;
 }

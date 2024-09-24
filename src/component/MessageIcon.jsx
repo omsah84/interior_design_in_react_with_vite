@@ -18,8 +18,8 @@ const bounce = keyframes`
 // Styled container
 const Container = styled("div")({
   position: "fixed",
-  right: "23px",
-  bottom: "20px",
+  right: "15px",
+  bottom: "10px",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -30,6 +30,7 @@ const Container = styled("div")({
 
 // Styled Message icon with animation
 const AnimatedMessage = styled(Message)({
+  // border:"3px solid red",
   fontSize: "50px",
   color: "red",
   animation: `${bounce} 2s infinite`, // Apply the bounce animation

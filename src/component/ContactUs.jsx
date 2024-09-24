@@ -13,16 +13,31 @@ const Container = styled(Box)({
   padding: '20px 20px',
 });
 
-const FormContainer = styled(Box)({
-  backgroundColor: '#fff',
-  padding: '20px',
-  width: '350px',
-  margin: '0 auto',
-  textAlign: 'center',
-  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  borderRadius: '10px',
-  height: '400px',
-});
+const FormContainer = styled(Box)(({ theme }) => ({
+  backgroundColor: "#fff",
+  padding: "20px",
+  width: "100%", // Full width on smaller screens
+  maxWidth: "350px", // Max width to limit size on larger screens
+  margin: "0 auto",
+  textAlign: "center",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  borderRadius: "10px",
+  height: "400px",
+
+  // Responsive design using media queries
+  [theme.breakpoints.down("sm")]: {
+    width: "90%", // Slightly reduce padding on small screens
+    padding: "15px",
+    height: "auto", // Adjust height for better responsiveness
+  },
+  [theme.breakpoints.up("md")]: {
+    width: "80%", // Adjust width for medium devices
+    padding: "20px",
+  },
+  [theme.breakpoints.up("lg")]: {
+    width: "350px", // Maintain the original size on larger screens
+  },
+}));
 
 const ContactUs = () => {
   const [name, setName] = useState('');
