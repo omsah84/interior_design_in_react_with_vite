@@ -56,12 +56,12 @@ export default function MessageIcon() {
 
   const handleCallClick = () => {
     // Phone call functionality (works on mobile)
-    window.location.href = "tel:+123456789"; // Replace with a real number
+    window.location.href = "tel:+917975230478"; // Replace with a real number
   };
 
   const handleWhatsAppClick = () => {
     // WhatsApp functionality (opens WhatsApp with a preset message)
-    window.open("https://wa.me/123456789?text=Hello", "_blank"); // Replace with a real number
+    window.open("https://wa.me/+917975230478?text=Hello", "_blank"); // Replace with a real number
   };
 
   return (

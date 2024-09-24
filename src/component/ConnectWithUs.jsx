@@ -39,8 +39,8 @@ const WhatsAppButton = styled(Button)({
 });
 
 const ConnectWithUs = () => {
-  const phoneNumber = '+919972317027'; // Replace with your phone number
-  const whatsappNumber = '+919972317027'; // Replace with your WhatsApp number
+  const phoneNumber = '+917975230478'; // Replace with your phone number
+  const whatsappNumber = '+917975230478'; // Replace with your WhatsApp number
 
   return (
     <ConnectContainer>
