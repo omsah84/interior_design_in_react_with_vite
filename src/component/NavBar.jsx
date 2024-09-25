@@ -72,7 +72,7 @@ export default function NavBar() {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {["HOME", "DESIGN IDEAS", "CONTACT US", "ABOUT US","TERMS & POLICY"].map((text, index) => (
+        {["HOME", "DESIGN IDEAS","PROJECT GALLERY","ROOM DESIGNS","STYLE GUIDE","MATERIALS & FINISHES","SERVICES", "CONTACT US", "ABOUT US","TERMS & POLICY"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
