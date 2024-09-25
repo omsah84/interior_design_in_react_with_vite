@@ -86,7 +86,7 @@ const Home = () => {
                 <Button
                   variant="contained"
                   style={{ backgroundColor: "#c43232", color: "white" }}
-                  onClick={() => window.open('tel:+1234567890')}
+                  onClick={() => window.open('tel:+917975230478')}
                 >
                   Call Us
                 </Button>
@@ -94,7 +94,7 @@ const Home = () => {
                   variant="contained"
                   style={{ backgroundColor: "#25d366", color: "white" }}
                   onClick={() =>
-                    window.open('https://wa.me/1234567890?text=Hello%20I%20am%20interested%20in%20your%20services')
+                    window.open('https://wa.me/+917975230478?text=Hello%20I%20am%20interested%20in%20your%20services')
                   }
                 >
                   WhatsApp Us

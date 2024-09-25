@@ -10,7 +10,7 @@ const NavBarStyled = styled("div")(({ theme }) => ({
   alignItems: "center",
   gap: "30px",
   position: "sticky",
-  top: "0px",
+  top: "40px",
   backgroundColor: "lightGray",
   
   // Media query for mobile devices
@@ -67,6 +67,9 @@ export default function NavBar() {
 
         <LinkStyled href="#">HOME</LinkStyled>
         <LinkStyled href="#">DESIGN IDEAS</LinkStyled>
+        {/* <LinkStyled href="#">INTERIOR DESIGN</LinkStyled>
+        <LinkStyled href="#">EXTERIOR DESIGN</LinkStyled>
+        <LinkStyled href="#">FURNITURE IDEAS</LinkStyled> */}
         <LinkStyled href="#">CONTACT US</LinkStyled>
         <LinkStyled href="#">ABOUT US</LinkStyled>
         <LinkStyled href="#">TERMS & POLICY</LinkStyled>
@@ -87,6 +90,15 @@ export default function NavBar() {
           </ListItem>
           <ListItem button onClick={handleDrawerToggle}>
             <ListItemText primary="DESIGN IDEAS" />
+          </ListItem>
+          <ListItem button onClick={handleDrawerToggle}>
+            <ListItemText primary="INTERIOR DESIGN" />
+          </ListItem>
+          <ListItem button onClick={handleDrawerToggle}>
+            <ListItemText primary="EXTERIOR DESIGN" />
+          </ListItem>
+          <ListItem button onClick={handleDrawerToggle}>
+            <ListItemText primary="FURNITURE IDEAS" />
           </ListItem>
           <ListItem button onClick={handleDrawerToggle}>
             <ListItemText primary="CONTACT US" />

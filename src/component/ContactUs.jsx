@@ -1,16 +1,9 @@
-import { useState } from 'react';
-import {
-  Box,
-  TextField,
-  Button,
-  Typography,
-  Checkbox,
-  FormControlLabel,
-} from '@mui/material';
-import { styled } from '@mui/system';
+import { useState } from "react";
+import { Box, TextField, Button, Typography } from "@mui/material";
+import { styled } from "@mui/system";
 
 const Container = styled(Box)({
-  padding: '20px 20px',
+  padding: "20px 20px",
 });
 
 const FormContainer = styled(Box)(({ theme }) => ({
@@ -40,30 +33,48 @@ const FormContainer = styled(Box)(({ theme }) => ({
 }));
 
 const ContactUs = () => {
-  const [name, setName] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [whatsappUpdates, setWhatsappUpdates] = useState(false);
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [errors, setErrors] = useState({}); // State for error messages
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here, e.g., send data to an API
-    console.log('Name:', name);
-    console.log('Phone Number:', phoneNumber);
-    console.log('WhatsApp Updates:', whatsappUpdates);
-    
-    // Example of how to handle WhatsApp updates opt-in
-    if (whatsappUpdates) {
-      // Here you can implement logic to handle WhatsApp updates, e.g., subscribing to updates
-      console.log('User opted in for WhatsApp updates.');
+    const newErrors = {}; // Object to store error messages
+
+    // Validation
+    if (!name) {
+      newErrors.name = "Please enter your name.";
+    }
+    if (!phoneNumber) {
+      newErrors.phoneNumber = "Please enter your phone number.";
+    }
+    if (!email) {
+      newErrors.email = "Please enter your email address.";
+    }
+    // Simple email format validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email && !emailPattern.test(email)) {
+      newErrors.email = "Please enter a valid email address.";
     }
 
-    // Clear form fields after submission (optional)
-    setName('');
-    setPhoneNumber('');
-    setWhatsappUpdates(false);
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors); // Set the error messages state
+    } else {
+      // Handle form submission logic here, e.g., send data to an API
+      console.log("Name:", name);
+      console.log("Phone Number:", phoneNumber);
+      console.log("Email:", email);
 
-    // Show success alert
-    alert('Successfully submitted!');
+      // Clear form fields after submission (optional)
+      setName("");
+      setPhoneNumber("");
+      setEmail("");
+      setErrors({}); // Clear error messages
+
+      // Show success alert
+      alert("Successfully submitted!");
+    }
   };
 
   return (
@@ -80,7 +91,9 @@ const ContactUs = () => {
             variant="outlined"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            error={!!errors.name} // Show red border if there's an error
           />
+
           <TextField
             fullWidth
             label="Phone number"
@@ -88,18 +101,19 @@ const ContactUs = () => {
             variant="outlined"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
+            error={!!errors.phoneNumber} // Show red border if there's an error
           />
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={whatsappUpdates}
-                onChange={(e) => setWhatsappUpdates(e.target.checked)}
-                name="whatsappUpdates"
-                color="primary"
-              />
-            }
-            label="Send me updates on WhatsApp"
+
+          <TextField
+            fullWidth
+            label="Email"
+            margin="normal"
+            variant="outlined"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            error={!!errors.email} // Show red border if there's an error
           />
+
           <Button type="submit" variant="contained" color="primary" fullWidth>
             Submit
           </Button>

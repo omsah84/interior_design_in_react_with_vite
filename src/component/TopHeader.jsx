@@ -34,22 +34,27 @@ const Content = styled(Typography)({
 
 const LinkStyled = styled(Link)({
   color: "white",
+  cursor: "pointer", // Change cursor to pointer
 });
 
 export default function TopNavBar() {
+  const handleCall = () => {
+    window.open('tel:+917975230478'); // Dialer will open with this number
+  };
+
   return (
     <Container className="container">
       <SubContainer>
         <ContentContainer>
-          <Content className=" tablet" variant="body1" color="white">
+          <Content className="tablet" variant="body1" color="white">
             <LocationOnIcon />
-            SY NO-101&156/2, Niladri, D Thogur, Bangalore , Karnataka - 560100
+            SY NO-101&156/2, Niladri, D Thogur, Bangalore, Karnataka - 560100
           </Content>
         </ContentContainer>
         <ContentContainer>
           <Content variant="body1" color="white">
             <Call />
-            <LinkStyled> +91 9793758934</LinkStyled>
+            <LinkStyled onClick={handleCall}> +917975230478</LinkStyled>
           </Content>
         </ContentContainer>
         <ContentContainer>
