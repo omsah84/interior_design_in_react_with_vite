@@ -1,4 +1,4 @@
-
+import TopHeader from "./component/TopHeader";
 import Header from "./component/Header";
 import Home from "./component/Home";
 import ChooseUs from "./component/ChooseUs";
@@ -10,22 +10,24 @@ import Testimonial from "./component/Testimonial";
 import PriceEstimator from "./component/PriceEstimator";
 import Offerings from "./component/Offerings";
 import DownloadBanner from "./component/DownloadBanner";
-import HowItWork from "./component/HowItWork"
+import HowItWork from "./component/HowItWork";
 import ConnectWithUs from "./component/ConnectWithUs";
 import NewsSection from "./component/NewsSection";
 import ContactUs from "./component/ContactUs";
 import PromotionalBanner from "./component/PromotionalBanner";
 import Footer from "./component/Footer";
 import MessageIcon from "./component/MessageIcon";
-
+import NavBar from "./component/Navbar";
 
 function App() {
   return (
     <>
+      <TopHeader />
       <Header />
+      <NavBar />
       <Home />
       <ChooseUs />
-      <HomeSpaceInterior/>
+      <HomeSpaceInterior />
       <CounterBanner />
       <Banner />
       <HomeStyle />
@@ -33,13 +35,13 @@ function App() {
       <PriceEstimator />
       <Offerings />
       <DownloadBanner />
-      <HowItWork/>
-      <ConnectWithUs/>
-      <NewsSection/>
-      <ContactUs/>
-      <PromotionalBanner/>
-      <Footer/>
-      <MessageIcon/>
+      <HowItWork />
+      <ConnectWithUs />
+      <NewsSection />
+      <ContactUs />
+      <PromotionalBanner />
+      <Footer />
+      <MessageIcon />
     </>
   );
 }

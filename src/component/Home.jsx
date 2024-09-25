@@ -6,6 +6,7 @@ import Homeimg1 from "../assets/Homeimg1.jpg";
 import Homeimg2 from "../assets/Homeimg2.jpg";
 import Homeimg3 from "../assets/Homeimg3.jpg";
 import Homeimg4 from "../assets/Homeimg4.jpg";
+import { Button } from "@mui/material"; // Import MUI Button component
 
 const MainContainer = styled("div")({
   height: "500px",
@@ -19,12 +20,7 @@ const Container = styled("div")(({ image }) => ({
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
-
-
-
 }));
-
-
 
 const Text = styled("div")({
   fontSize: "30px",
@@ -34,14 +30,12 @@ const Text = styled("div")({
   textAlign: "center",
   fontWeight: "600",
   padding: "30px 0px",
-  // border: "2px solid green",
   float: "left",
   display: "flex",
+  flexDirection: "column", // Stack buttons below text
   alignItems: "center",
-  justifyCOntent: "center",
+  justifyContent: "center",
   textShadow: "3px 4px 5px black, -2px -1px 1px red",
-
-
 
   // Media query for small devices
   "@media (max-width: 900px)": {
@@ -52,15 +46,12 @@ const Text = styled("div")({
 });
 
 const Form = styled("div")({
-  // border: "2px solid blue",
   width: "50%",
   height: "100%",
   float: "right",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-
-
 
   // Media query for small devices
   "@media (max-width: 900px)": {
@@ -72,74 +63,51 @@ const Form = styled("div")({
 const settings = {
   dots: true,
   infinite: true,
-  speed: 1000,
+  speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 10000,
 };
 
 const Home = () => {
   return (
-    <>
-      <MainContainer>
-        <Slider {...settings}>
-          <Container image={Homeimg1}>
+    <MainContainer>
+      <Slider {...settings}>
+        {[Homeimg3, Homeimg0, Homeimg1, Homeimg2, Homeimg4].map((image, index) => (
+          <Container key={index} image={image}>
             <Text>
-              Transform your home with stunning, affordable interiors.
-              Experience exceptional craftsmanship and on-time delivery with
-              unparalleled precision.
+              <div>
+                Transform your home with stunning, affordable interiors.
+                Experience exceptional craftsmanship and on-time delivery with unparalleled precision.
+              </div>
+              {/* WhatsApp and Call buttons */}
+              <div style={{ marginTop: "20px", display: "flex", gap: "15px" }}>
+                <Button
+                  variant="contained"
+                  style={{ backgroundColor: "#c43232", color: "white" }}
+                  onClick={() => window.open('tel:+1234567890')}
+                >
+                  Call Us
+                </Button>
+                <Button
+                  variant="contained"
+                  style={{ backgroundColor: "#25d366", color: "white" }}
+                  onClick={() =>
+                    window.open('https://wa.me/1234567890?text=Hello%20I%20am%20interested%20in%20your%20services')
+                  }
+                >
+                  WhatsApp Us
+                </Button>
+              </div>
             </Text>
             <Form>
               <ContactUs />
             </Form>
           </Container>
-          <Container image={Homeimg0}>
-
-            <Text>
-              Transform your home with stunning, affordable interiors.
-              Experience exceptional craftsmanship and on-time delivery with
-              unparalleled precision.
-            </Text>
-            <Form>
-              <ContactUs />
-            </Form>
-          </Container>
-          <Container image={Homeimg2}>
-            <Text>
-              Transform your home with stunning, affordable interiors.
-              Experience exceptional craftsmanship and on-time delivery with
-              unparalleled precision.
-            </Text>
-            <Form>
-              <ContactUs />
-            </Form>
-          </Container>
-          <Container image={Homeimg3}>
-
-            <Text>
-              Transform your home with stunning, affordable interiors.
-              Experience exceptional craftsmanship and on-time delivery with
-              unparalleled precision.
-            </Text>
-            <Form>
-              <ContactUs />
-            </Form>
-          </Container>
-          <Container image={Homeimg4}>
-
-            <Text>
-              Transform your home with stunning, affordable interiors.
-              Experience exceptional craftsmanship and on-time delivery with
-              unparalleled precision.
-            </Text>
-            <Form>
-              <ContactUs />
-            </Form>
-          </Container>
-        </Slider>
-      </MainContainer>
-    </>
+        ))}
+      </Slider>
+    </MainContainer>
   );
 };
 
