@@ -22,7 +22,7 @@ import ContactUs from "./component/ContactUs";
 import PromotionalBanner from "./component/PromotionalBanner";
 import Footer from "./component/Footer";
 import MessageIcon from "./component/MessageIcon";
-import NavBar from "./component/Navbar";
+// import NavBar from "./component/Navbar";
 
 import img from "./assets/Royal.jpg";
 import Classic from "./assets/Classic Indian Bedroom.jpg";
@@ -34,7 +34,7 @@ function App() {
     <>
       <TopHeader />
       <Header />
-      <NavBar />
+      {/* <NavBar /> */}
       <Home />
       <ChooseUs />
       <HomeSpaceInterior />

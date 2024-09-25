@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { Link, styled, Drawer, IconButton, List, ListItem, ListItemText } from "@mui/material";
+import {
+  Link,
+  styled,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const NavBarStyled = styled("div")(({ theme }) => ({
@@ -12,7 +20,7 @@ const NavBarStyled = styled("div")(({ theme }) => ({
   position: "sticky",
   top: "40px",
   backgroundColor: "lightGray",
-  
+
   // Media query for mobile devices
   [theme.breakpoints.down("sm")]: {
     justifyContent: "center", // Centering the hamburger icon
