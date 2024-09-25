@@ -48,7 +48,7 @@ export default function MessageIcon() {
 
   const handleWhatsAppClick = () => {
     // WhatsApp functionality (opens WhatsApp with a preset message)
-    window.open("https://wa.me/+917975230478?text=Hello", "_blank"); // Replace with a real number
+    window.open("https://wa.me/+917975230478?text=Hello", "_blank");
   };
 
   return (

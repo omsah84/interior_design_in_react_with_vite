@@ -4,7 +4,7 @@ import Home from "./component/Home";
 import ChooseUs from "./component/ChooseUs";
 import HomeSpaceInterior from "./component/HomeSpaceInterior";
 import CounterBanner from "./component/CounterBanner";
-// import Banner from "./component/Banner";
+import Banner from "./component/Banner";
 import HomeOffice from "./component/SliderFormater";
 import LivingRoom from "./component/SliderFormater";
 import BedRoom from "./component/SliderFormater";
@@ -15,11 +15,11 @@ import Testimonial from "./component/Testimonial";
 import PriceEstimator from "./component/PriceEstimator";
 import Offerings from "./component/Offerings";
 import DownloadBanner from "./component/DownloadBanner";
-// import HowItWork from "./component/HowItWork";
+import HowItWork from "./component/HowItWork";
 import ConnectWithUs from "./component/ConnectWithUs";
 import NewsSection from "./component/NewsSection";
 import ContactUs from "./component/ContactUs";
-// import PromotionalBanner from "./component/PromotionalBanner";
+import PromotionalBanner from "./component/PromotionalBanner";
 import Footer from "./component/Footer";
 import MessageIcon from "./component/MessageIcon";
 import NavBar from "./component/Navbar";
@@ -63,7 +63,7 @@ function App() {
       <ChooseUs />
       <HomeSpaceInterior />
       <CounterBanner />
-      {/* <Banner /> */}
+      <Banner />
       <HomeOffice
         slides={slides}
         heading="Home Office to Match Every Style"
@@ -99,11 +99,11 @@ function App() {
       <PriceEstimator />
       <Offerings />
       <DownloadBanner />
-      {/* <HowItWork /> */}
+      <HowItWork />
       <ConnectWithUs />
       <NewsSection />
       <ContactUs />
-      {/* <PromotionalBanner /> */}
+      <PromotionalBanner />
       <Footer />
       <MessageIcon />
     </>
