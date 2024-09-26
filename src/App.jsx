@@ -7,7 +7,7 @@ import TermsPolicy from "./pages/TermsPolicy.jsx";
 
 import TopHeader from "./component/TopHeader";
 import Header from "./component/Header";
-import Navbar from "./component/Navbar.jsx";
+// import Navbar from "./component/Navbar.jsx";
 import Home from "./component/Home";
 import ChooseUs from "./component/ChooseUs";
 import HomeSpaceInterior from "./component/HomeSpaceInterior";
@@ -100,7 +100,7 @@ function App() {
     <Router>
       <TopHeader />
       <Header />
-      <Navbar/>
+      {/* <Navbar/> */}
       <Home />
 
       <Routes>
