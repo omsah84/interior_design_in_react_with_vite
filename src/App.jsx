@@ -1,3 +1,10 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import ContactUs from "./component/ContactUs";
+import AboutUs from "./pages/AboutUs.jsx";
+// import DesignIdeas from "./pages/DesignIdeas.jsx";
+import TermsPolicy from "./pages/TermsPolicy.jsx";
+
 import TopHeader from "./component/TopHeader";
 import Header from "./component/Header";
 import Home from "./component/Home";
@@ -18,7 +25,6 @@ import DownloadBanner from "./component/DownloadBanner";
 import HowItWork from "./component/HowItWork";
 import ConnectWithUs from "./component/ConnectWithUs";
 import NewsSection from "./component/NewsSection";
-import ContactUs from "./component/ContactUs";
 import PromotionalBanner from "./component/PromotionalBanner";
 import Footer from "./component/Footer";
 import MessageIcon from "./component/MessageIcon";
@@ -26,22 +32,15 @@ import NavBar from "./component/Navbar";
 
 import { homeofficesliders } from "./data/HomeOffice.js";
 import { livingroomsliders } from "./data/LivingRoom.js";
-import {kitchensliders} from "./data/Kitchen.js";
-import {outdoorspacesliders} from "./data/OutdoorSpace.js";
-import {bedroomsliders} from "./data/BedRoom.js";
-import {diningroomsliders} from "./data/DiningRoom.js";
+import { kitchensliders } from "./data/Kitchen.js";
+import { outdoorspacesliders } from "./data/OutdoorSpace.js";
+import { bedroomsliders } from "./data/BedRoom.js";
+import { diningroomsliders } from "./data/DiningRoom.js";
+// import DesignIdeas from "./pages/DesignIdeas.jsx";
 
-function App() {
+function DesignComponent() {
   return (
     <>
-      <TopHeader />
-      <Header />
-      <NavBar />
-      <Home />
-      <ChooseUs />
-      <HomeSpaceInterior />
-      <CounterBanner />
-      <Banner />
       <HomeOffice
         slides={homeofficesliders}
         heading="Home Office to Match Every Style"
@@ -52,7 +51,6 @@ function App() {
         heading="Living Room to Match Every Style"
         subheading="Discover elegant and cozy designs for your gathering spaces."
       />
-      
       <BedRoom
         slides={bedroomsliders}
         heading="Bedroom to Match Every Style"
@@ -72,8 +70,19 @@ function App() {
         slides={outdoorspacesliders}
         heading="Outdoor Space to Match Every Style"
         subheading="Enhance your outdoor areas for relaxation and entertainment."
-      /> 
+      />
+    </>
+  );
+}
 
+function HomePage() {
+  return (
+    <>
+      <ChooseUs />
+      <HomeSpaceInterior />
+      <CounterBanner />
+      <Banner />
+      <DesignComponent />
       <Testimonial />
       <PriceEstimator />
       <Offerings />
@@ -81,11 +90,44 @@ function App() {
       <HowItWork />
       <ConnectWithUs />
       <NewsSection />
-      <ContactUs />
       <PromotionalBanner />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <TopHeader />
+      <Header />
+      <NavBar />
+      <Home />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route
+          path="/design-ideas"
+          element={
+            <>
+              <DesignComponent />
+            </>
+          }
+        />
+        <Route path="/home-office-designs" element={<DesignComponent />} />
+        <Route path="/living-room-designs" element={<DesignComponent />} />
+        <Route path="/bed-room-designs" element={<DesignComponent />} />
+        <Route path="/kitchen-room-designs" element={<DesignComponent />} />
+        <Route path="/dining-room-designs" element={<DesignComponent />} />
+        <Route path="/outdoor=designs" element={<DesignComponent />} />
+        <Route path="/terms-&-policy" element={<TermsPolicy />} />
+      </Routes>
+
       <Footer />
       <MessageIcon />
-    </>
+    </Router>
   );
 }
 

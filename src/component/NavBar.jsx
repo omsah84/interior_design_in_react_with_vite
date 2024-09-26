@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { Link, styled, IconButton } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom"; // Use Link from react-router-dom
+import { styled, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-// import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-// import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -23,6 +22,7 @@ const NavBarStyled = styled("div")(({ theme }) => ({
   position: "sticky",
   top: "40px",
   backgroundColor: "lightGray",
+  zIndex:"2",
 
   // Media query for mobile devices
   [theme.breakpoints.down("sm")]: {
@@ -31,12 +31,13 @@ const NavBarStyled = styled("div")(({ theme }) => ({
   },
 }));
 
-const LinkStyled = styled(Link)(({ theme }) => ({
+const LinkStyled = styled(RouterLink)(({ theme }) => ({
   textDecoration: "none",
   fontSize: "15px",
   fontWeight: "500",
   color: "black",
   transition: "color 0.3s ease",
+  cursor: "pointer",
 
   "&:hover": {
     color: "blue",
@@ -70,14 +71,24 @@ export default function Navbar() {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
       <List>
-        {["HOME", "DESIGN IDEAS","PROJECT GALLERY","ROOM DESIGNS","STYLE GUIDE","MATERIALS & FINISHES","SERVICES", "CONTACT US", "ABOUT US","TERMS & POLICY"].map((text, index) => (
+        {[
+          "HOME",
+          "DESIGN IDEAS",
+          "HOME OFFICE DESIGNS",
+          "LIVING ROOM DESIGNS",
+          "BED ROOM DESIGNS",
+          "KITCHEN ROOM DESIGNS",
+          "DINING ROOM DESIGNS",
+          "OUTDOOR DESIGNS",
+          "CONTACT US",
+          "ABOUT US",
+          "TERMS & POLICY",
+        ].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
+            <ListItemButton component={RouterLink} to={`/${text.replace(/\s+/g, '-').toLowerCase()}`}>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
@@ -93,15 +104,16 @@ export default function Navbar() {
           <MenuIcon />
         </MenuIconStyled>
 
-        <LinkStyled href="#">HOME</LinkStyled>
-        <LinkStyled href="#">DESIGN IDEAS</LinkStyled>
-        <LinkStyled href="#">CONTACT US</LinkStyled>
-        <LinkStyled href="#">ABOUT US</LinkStyled>
-        <LinkStyled href="#">TERMS & POLICY</LinkStyled>
+        {/* Desktop Links */}
+        <LinkStyled to="/">HOME</LinkStyled>
+        <LinkStyled to="/design-ideas">DESIGN IDEAS</LinkStyled>
+        <LinkStyled to="/contact-us">CONTACT US</LinkStyled>
+        <LinkStyled to="/about-us">ABOUT US</LinkStyled>
+        <LinkStyled to="/terms-&-policy">TERMS & POLICY</LinkStyled>
       </NavBarStyled>
 
       {/* Drawer (Side Slider) for Mobile */}
-      <Drawer open={open} onClose={toggleDrawer(false)}>
+      <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
     </>

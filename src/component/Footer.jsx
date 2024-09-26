@@ -2,8 +2,8 @@ import { Box, Typography, Link } from "@mui/material";
 import { styled } from "@mui/system";
 
 const FooterContainer = styled(Box)({
-  backgroundColor: "#f8f8f8",
-  padding: "20px",
+  backgroundColor: "#f3f0de",
+  padding: "5px",
   textAlign: "center",
 });
 
@@ -12,8 +12,9 @@ const Container = styled(Box)({
   justifyContent: "space-around", // Space items evenly in a single row
   alignItems: "center", // Center items vertically
   flexWrap: "wrap", // Allow wrapping on smaller screens
-  marginBottom: "30px",
+  marginBottom: "20px",
   "@media (max-width: 700px)": {
+    gap:"20px",
     flexDirection: "column",
     alignItems: "center", // Center items on smaller screens
   },
@@ -23,6 +24,7 @@ const FooterLink = styled(Link)({
   margin: "0 10px",
   color: "#000",
   textDecoration: "none",
+  padding: "3px 0px",
   fontSize: "14px", // Adjusted font size for better visibility
   "&:hover": {
     textDecoration: "underline",
@@ -39,33 +41,44 @@ const Address = styled(Typography)({
 const Footer = () => {
   return (
     <FooterContainer>
-      <Container m={3}>
-        {/* Menu Links */}
-        <Box display="flex" flexDirection={{ xs: "column", sm: "column" }}>
-          <FooterLink href="#">Our Services</FooterLink>
-          <FooterLink href="#">Contact Us</FooterLink>
-          <FooterLink href="#">About Us</FooterLink>
-        </Box>
-        <Box display="flex" flexDirection={{ xs: "column", sm: "column" }}>
-          <FooterLink href="#">Interior Designers in Pune</FooterLink>
-          <FooterLink href="#">Interior Designers in Kolkata</FooterLink>
-          <FooterLink href="#">Interior Designers in Gurgaon</FooterLink>
-        </Box>
-
+      <Container m={1}>
         {/* Address Section */}
         <Address>
-          123 Design Street, Suite 456
+          SY NO-101&156/2, Niladri, D Thogur
           <br />
-          Pune, Maharashtra, 411001
+          Bangalore, Karnataka - 560100
           <br />
-          Phone: (123) 456-7890
+          Phone: +91 7975230478
           <br />
           Email: contact@example.com
         </Address>
+
+        {/* Menu Links */}
+        <Box display="flex" flexDirection={{ xs: "column", sm: "column" }}>
+          <FooterLink href="#">Design Ideas</FooterLink>
+          <FooterLink href="#">Project Gallery</FooterLink>
+          <FooterLink href="#">Room Designs</FooterLink>
+          <FooterLink href="#">Style Guide</FooterLink>
+          <FooterLink href="#">Materials & Finishes</FooterLink>
+        </Box>
+
+        <Box display="flex" flexDirection={{ xs: "column", sm: "column" }}>
+          {/* <FooterLink href="#">Interior Designers in Kolkata</FooterLink> */}
+          {/* <FooterLink href="#">Interior Designers in Gurgaon</FooterLink> */}
+          <FooterLink href="#">Interior Designers in Mumbai</FooterLink>
+          <FooterLink href="#">Interior Designers in Delhi</FooterLink>
+          <FooterLink href="#">Interior Designers in Hyderabad</FooterLink>
+          <FooterLink href="#">Interior Designers in Bangalore</FooterLink>
+          <FooterLink href="#">Interior Designers in Chennai</FooterLink>
+          {/* <FooterLink href="#">Interior Designers in Ahmedabad</FooterLink> */}
+          <FooterLink href="#">Interior Designers in Jaipur</FooterLink>
+          <FooterLink href="#">Interior Designers in Chandigarh</FooterLink>
+          <FooterLink href="#">Interior Designers in Noida</FooterLink>
+        </Box>
       </Container>
 
       <Typography variant="body2" color="textSecondary">
-        Copyright © 2023. All rights reserved.
+        Copyright © 2018. All rights reserved.
       </Typography>
     </FooterContainer>
   );
