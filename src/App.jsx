@@ -22,36 +22,10 @@ import ContactUs from "./component/ContactUs";
 import PromotionalBanner from "./component/PromotionalBanner";
 import Footer from "./component/Footer";
 import MessageIcon from "./component/MessageIcon";
-import NavBar from "./component/NavBar";
+import NavBar from "./component/Navbar";
 
-import img from "./assets/Royal.jpg";
-import Classic from "./assets/Classic Indian Bedroom.jpg";
-import Contemporary from "./assets/Contemporary & Classy 4 BHK.jpg";
-import Monochromatic from "./assets/Monochromatic Grey 2 BHK.jpg";
+import {homeofficeslides} from "./data/HomeOffice.js";
 
-// Slide data
-const slides = [
-  {
-    image: img,
-    title: "Royal & Elegant 3 BHK",
-    description: "Add refinement and sophistication to your home.",
-  },
-  {
-    image: Monochromatic,
-    title: "Monochromatic Grey 2 BHK",
-    description: "Add the cloudy hues to your space.",
-  },
-  {
-    image: Contemporary,
-    title: "Contemporary & Classy 4 BHK",
-    description: "Classic and cosmopolitan designs.",
-  },
-  {
-    image: Classic,
-    title: "Classic Indian Bedroom",
-    description: "Bring in traditional elegance to your bedroom.",
-  },
-];
 
 function App() {
   return (
@@ -65,11 +39,11 @@ function App() {
       <CounterBanner />
       <Banner />
       <HomeOffice
-        slides={slides}
+        slides={homeofficeslides}
         heading="Home Office to Match Every Style"
         subheading="Explore productive and creative spaces tailored to your needs."
       />
-      <LivingRoom
+      {/* <LivingRoom
         slides={slides}
         heading="Living Room to Match Every Style"
         subheading="Discover elegant and cozy designs for your gathering spaces."
@@ -93,7 +67,7 @@ function App() {
         slides={slides}
         heading="Outdoor Space to Match Every Style"
         subheading="Enhance your outdoor areas for relaxation and entertainment."
-      />
+      /> */}
 
       <Testimonial />
       <PriceEstimator />

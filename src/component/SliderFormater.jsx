@@ -26,7 +26,7 @@ const SlideContainer = styled(Box)({
 const SlideImage = styled("img")({
   width: "250px",
   height: "250px",
-  borderRadius: "25%",
+  borderRadius: "25px",
   objectFit: "cover",
   marginBottom: "10px",
   margin: "0 auto",
