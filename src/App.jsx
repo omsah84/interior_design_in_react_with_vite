@@ -24,8 +24,12 @@ import Footer from "./component/Footer";
 import MessageIcon from "./component/MessageIcon";
 import NavBar from "./component/Navbar";
 
-import {homeofficeslides} from "./data/HomeOffice.js";
-
+import { homeofficesliders } from "./data/HomeOffice.js";
+import { livingroomsliders } from "./data/LivingRoom.js";
+import {kitchensliders} from "./data/Kitchen.js";
+import {outdoorspacesliders} from "./data/OutdoorSpace.js";
+import {bedroomsliders} from "./data/BedRoom.js";
+import {diningroomsliders} from "./data/DiningRoom.js";
 
 function App() {
   return (
@@ -39,35 +43,36 @@ function App() {
       <CounterBanner />
       <Banner />
       <HomeOffice
-        slides={homeofficeslides}
+        slides={homeofficesliders}
         heading="Home Office to Match Every Style"
         subheading="Explore productive and creative spaces tailored to your needs."
       />
-      {/* <LivingRoom
-        slides={slides}
+      <LivingRoom
+        slides={livingroomsliders}
         heading="Living Room to Match Every Style"
         subheading="Discover elegant and cozy designs for your gathering spaces."
       />
+      
       <BedRoom
-        slides={slides}
+        slides={bedroomsliders}
         heading="Bedroom to Match Every Style"
         subheading="Create your serene retreat with our stylish bedroom designs."
       />
       <Kitchen
-        slides={slides}
+        slides={kitchensliders}
         heading="Kitchen to Match Every Style"
         subheading="Transform your culinary space with modern and functional designs."
       />
       <DiningRoom
-        slides={slides}
+        slides={diningroomsliders}
         heading="Dining Room to Match Every Style"
         subheading="Enjoy delightful dining experiences in beautifully designed spaces."
       />
       <OutdoorSpace
-        slides={slides}
+        slides={outdoorspacesliders}
         heading="Outdoor Space to Match Every Style"
         subheading="Enhance your outdoor areas for relaxation and entertainment."
-      /> */}
+      /> 
 
       <Testimonial />
       <PriceEstimator />

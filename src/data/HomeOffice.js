@@ -14,7 +14,7 @@ import contemporaryhomeoffice from "../assets/Contemporary & Classy 4 BHK.jpg";
 import creativestudiohomeoffice from "../assets/Creative Studio Home Office.jpg";
 import ecofriendlyhomeoffice from "../assets/Eco-Friendly Home Office.jpg";
 
-export const homeofficeslides = [
+export const homeofficesliders = [
   {
     image: industrialhomeoffice,
     title: "Industrial Home Office",
