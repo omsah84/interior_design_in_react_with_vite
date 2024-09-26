@@ -28,7 +28,7 @@ import NewsSection from "./component/NewsSection";
 import PromotionalBanner from "./component/PromotionalBanner";
 import Footer from "./component/Footer";
 import MessageIcon from "./component/MessageIcon";
-import NavBar from "./component/Navbar";
+import Navbar from "./component/Navbar";
 
 import { homeofficesliders } from "./data/HomeOffice.js";
 import { livingroomsliders } from "./data/LivingRoom.js";
@@ -100,7 +100,7 @@ function App() {
     <Router>
       <TopHeader />
       <Header />
-      <NavBar />
+      <Navbar />
       <Home />
 
       <Routes>
