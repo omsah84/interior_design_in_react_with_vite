@@ -63,7 +63,7 @@ const MenuIconStyled = styled(IconButton)(({ theme }) => ({
   },
 }));
 
-export default function Navbar() {
+export const Navbar=() =>{
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
