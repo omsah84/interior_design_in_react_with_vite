@@ -22,7 +22,7 @@ const NavBarStyled = styled("div")(({ theme }) => ({
   position: "sticky",
   top: "40px",
   backgroundColor: "lightGray",
-  zIndex:"2",
+  zIndex: "2",
 
   // Media query for mobile devices
   [theme.breakpoints.down("sm")]: {
@@ -71,7 +71,12 @@ export default function Navbar() {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
+    <Box
+      sx={{ width: 250 }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+    >
       <List>
         {[
           "HOME",
@@ -87,8 +92,13 @@ export default function Navbar() {
           "TERMS & POLICY",
         ].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton component={RouterLink} to={`/${text.replace(/\s+/g, '-').toLowerCase()}`}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+            <ListItemButton
+              component={RouterLink}
+              to={`/${text.replace(/\s+/g, "-").toLowerCase()}`}
+            >
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>

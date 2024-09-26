@@ -7,6 +7,7 @@ import TermsPolicy from "./pages/TermsPolicy.jsx";
 
 import TopHeader from "./component/TopHeader";
 import Header from "./component/Header";
+import Navbar from "./component/Navbar.jsx";
 import Home from "./component/Home";
 import ChooseUs from "./component/ChooseUs";
 import HomeSpaceInterior from "./component/HomeSpaceInterior";
@@ -28,7 +29,6 @@ import NewsSection from "./component/NewsSection";
 import PromotionalBanner from "./component/PromotionalBanner";
 import Footer from "./component/Footer";
 import MessageIcon from "./component/MessageIcon";
-import Navbar from "./component/Navbar";
 
 import { homeofficesliders } from "./data/HomeOffice.js";
 import { livingroomsliders } from "./data/LivingRoom.js";
@@ -100,7 +100,7 @@ function App() {
     <Router>
       <TopHeader />
       <Header />
-      <Navbar />
+      <Navbar/>
       <Home />
 
       <Routes>
